@@ -4,8 +4,8 @@ auth:
 base_image: oblv_ubuntu_18_04_proxy_nsm_api_python_3_8
 build_args: []
 meta:
-  author: Team Oblivious
-  author_email: 
+  author: Fergus
+  author_email: leenf@tcd.ie
   git: https://github.com/thgil/oblv-test.git
   version: 0.1.0
 paths:
