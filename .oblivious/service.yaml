@@ -1,0 +1,29 @@
+auth:
+- auth_name: auth_name
+  auth_type: signed_headers
+base_image: oblv_ubuntu_18_04_proxy_nsm_api_python_3_9
+build_args: []
+meta:
+  author: Team Oblivious
+  author_email: hello@oblivious.ai
+  git: https://github.com/thgil/oblv-test.git
+  version: 0.1.0
+paths:
+- access: user
+  path: /say_hello/
+  short_description: Hello world example
+roles:
+- role_auth: auth_name
+  role_cardinality: 1
+  role_description: Role for the data scientist
+  role_name: user
+traffic:
+  inbound:
+  - name: main_io
+    port: 80
+    type: tcp
+  outbound:
+  - domain: example.com
+    name: example
+    port: 443
+    type: tcp
